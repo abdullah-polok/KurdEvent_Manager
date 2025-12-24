@@ -43,13 +43,13 @@ class _SplashPageState extends State<SplashPage> {
             const SizedBox(height: 20),
 
             // App Name or loading text
-            const Text(
-              "CyberLearn",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            // const Text(
+            //   "Kurd Event Manager",
+            //   style: TextStyle(
+            //     fontSize: 24,
+            //     fontWeight: FontWeight.bold,
+            //   ),
+            // ),
 
             const SizedBox(height: 10),
 
