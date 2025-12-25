@@ -61,7 +61,14 @@ child:Column(
       Align(
   alignment: Alignment.center,
   ///Filled the background color of the button with style
-  child:FilledButton(onPressed: (){},child:Text('Sign in'),style:FilledButton.styleFrom(backgroundColor:Colors.blue.shade500))
+  child: SizedBox(
+    ///Make the button full width using SizedBox
+      width: double.infinity,
+      height: 52,
+      child:FilledButton(onPressed: (){},child:Text('Sign in',style:TextStyle(fontSize:18),),style:FilledButton.styleFrom(backgroundColor:Colors.blue.shade500,shape:RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(5),
+      )))
+  )
 ),
 
       SizedBox(height:20),
@@ -81,10 +88,76 @@ child:Column(
       ),
 
       SizedBox(height: 20),
-    Align(
-      alignment: Alignment.center,
-    )
 
+      ///Google Button with outline button
+
+      Align(
+      alignment: Alignment.center,
+     child:
+     SizedBox(
+      width:double.infinity,
+      height: 52,
+      child:OutlinedButton(
+        onPressed:() {},style: OutlinedButton.styleFrom(side:BorderSide(color: Colors.grey.shade300),
+      shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(5)),
+        backgroundColor: Colors.white
+      ),
+        child: Row(
+          mainAxisAlignment:MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/google.png', // Google logo
+              height: 22,
+            ),
+            SizedBox(width: 12),
+            Text(
+              'Login with Google',
+              style: TextStyle(
+                color: Colors.black87,
+                fontSize: 16,
+              ),
+            ),
+          ],
+        ),
+      )
+      ),
+
+    ),
+
+      SizedBox(height: 20),
+
+      Align(
+        alignment: Alignment.center,
+        child:
+        SizedBox(
+            width:double.infinity,
+            height: 52,
+            child:OutlinedButton(
+              onPressed:() {},style: OutlinedButton.styleFrom(side:BorderSide(color: Colors.grey.shade300),
+                shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(5)),
+                backgroundColor: Colors.white
+            ),
+              child: Row(
+                mainAxisAlignment:MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/images/facebook.png', // Google logo
+                    height: 22,
+                  ),
+                  SizedBox(width: 12),
+                  Text(
+                    'Login with facebook',
+                    style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              ),
+            )
+        ),
+
+      ),
     ]
 )
 )
