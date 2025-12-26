@@ -25,7 +25,7 @@ class WelcomePage extends StatelessWidget {
                 style:FilledButton.styleFrom(backgroundColor:Colors.blue.shade500)),
 
             SizedBox(height:40),
-            TextButton(onPressed: (){}, child:Text('Create Account',style:TextStyle(color:Colors.blue.shade700)))
+            TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupPage()));}, child:Text('Create Account',style:TextStyle(color:Colors.blue.shade700)))
 
         ]
 
