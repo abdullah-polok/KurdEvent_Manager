@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Login_page.dart';
 import 'signup_page.dart';
+import 'dashboard_page.dart';
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
 
@@ -20,7 +21,7 @@ class WelcomePage extends StatelessWidget {
 
             ///Use Material 3 buttons and set background colors to blue
             FilledButton(onPressed:(){
-              Navigator.push(context,MaterialPageRoute(builder:(context)=>LoginPage()));
+              Navigator.push(context,MaterialPageRoute(builder:(context)=>Dashboard()));
             }, child: Text('Login'),
                 style:FilledButton.styleFrom(backgroundColor:Colors.blue.shade500)),
 
